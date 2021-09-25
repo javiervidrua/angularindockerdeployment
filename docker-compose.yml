@@ -1,0 +1,13 @@
+# This file will use the Dockerfile to run a container with that image
+
+version: "3.9"
+services:
+  web:
+    # build: . will make Docker Compose run 'docker image build .'
+    # https://stackoverflow.com/questions/29480099/whats-the-difference-between-docker-compose-vs-dockerfile
+    build: .
+    ports:
+      - "80:80"
+  # If we wanted more services, we'll put them right here
+  #redis:
+    #image: "redis:alpine"
